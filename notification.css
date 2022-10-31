@@ -1,0 +1,67 @@
+.notification{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 40vh;
+    width: clamp(60vw, 50em, 80vw);
+    border-radius: 10vmin;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 1em;
+    background: var(--body-bg);
+    gap: 2vmin;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3); 
+    overflow: hidden;
+}
+
+.notification::after{
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 1);
+    filter: blur(5px);
+    margin: -20px;
+}
+
+.notification input{
+    width: 100%;
+    padding: 2vmin;
+}
+
+.notification div{
+    width: 100%;
+}
+
+.notification button{
+    font-size: clamp(2vmin, 0.7em, 0.5em);
+    cursor: pointer;
+    border-radius: 1vmin;
+    border: 0.5vmin solid var(--body-bg);
+    background: transparent;
+    color: black;
+    width: 100%;
+    padding: 2vmin;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 1);
+}
+
+.notification .Go{
+    width: 30%;
+}
+
+red{
+    color: red;
+    text-decoration: underline;
+}
+
+.notification O, .notification X{
+    font-size: 6vmin;
+}

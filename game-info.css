@@ -1,0 +1,55 @@
+.game-info{
+    user-select: none;
+    position: absolute;
+    width: 80vw;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: rgb(172, 172, 172);
+    font-size: clamp(2.5vmin, 1em, 0.5em);
+}
+
+O, X{
+    font-size: 3em;
+    line-height: 1rem;
+}
+
+u{
+    cursor: pointer;
+    color: white;
+}
+
+
+.myColor, .opponentColor{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    height: 50vh;
+    width: 100vw;
+    background: linear-gradient(var(--my-clr), var(--body-bg));
+    z-index: -10;
+}
+
+.opponentColor{
+    top: 0;
+    background: linear-gradient(to top, var(--opponent-clr), var(--body-bg));
+}
+
+.wins{
+    color: white;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0, -50%);
+    border-radius: 0 1em 1em 0;
+    background: var(--body-bg);
+}
+
+.win-user, .win-opponent{
+    padding: clamp(2.5vmin, 2em, 2.5vmin);
+}
+
+.win-opponent{
+    box-shadow: 0 0.25vmin 0 white;
+}
